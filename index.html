@@ -474,27 +474,27 @@ textarea{width:min(320px,90vw);height:90px;border-radius:12px;border:1px solid v
  </svg>
  </div>
  <p id="cakeText">แตะที่เค้กเพื่อ "ขอพร" ✨</p>
- <button class="btn ghost" id="micBtn" onclick="toggleMic()">🎤 เป่าด้วยลมจริง</button>
+ <button class="btn ghost" id="micBtn" onclick="toggleMic()">🎤 เป่าเค้กก่อนสิ!</button>
  </div>
   </div>
  </div>
  <div class="scrollhint">เลื่อนลงดูอีก ↓ ♥</div>
  <div id="bReveal">
-  <div class="rv-title">✦ เหตุผลที่รักเธอ ✦</div>
+  <div class="rv-title">✦ วันนี้วันอะไรน้า ✦</div>
   <!-- การ์ดถูกสร้างจาก CONFIG.birthdayReasons -->
   <div class="envelope" onclick="openLetter()">💌</div>
-  <small>แตะซองจดหมายเพื่อเปิดอ่าน</small>
+  <small>ลองเปิดอ่านก่อนสิ</small>
  </div>
  <button class="btn" id="bdayNext" style="display:none" onclick="clearBalloons();show('bnote')">เปิดการ์ดวันเกิด ♥</button></section>
 
 <!-- 7. โน้ตวันเกิด + ของขวัญวันเกิด -->
 <section class="pg" id="bnote"><h2>HAPPY BIRTHDAY 🎂</h2><div class="paper"><p id="bdayMsg"></p></div>
- <div class="gift" id="bgift" onclick="openBdayGift()">🎁</div><p id="bgiftText">แตะกล่องเพื่อเปิดของขวัญวันเกิด</p>
+ <div class="gift" id="bgift" onclick="openBdayGift()">🎁</div><p id="bgiftText">เปิดของขวัญวันเกิดเร็ว!</p>
  <button class="btn" id="bnoteBtn" style="display:none" onclick="endBirthday()">ปิดการ์ด ♥</button></section>
 
 <!-- 8. มือถือ -->
 <section class="pg" id="phonePg"><div class="phone">
- <div class="screen on" id="lockScreen"><div class="clock" id="clock">00:00</div><small id="lockGreeting">hi, favorite person ♥ 🌙✨</small><p style="font-size:.8rem">ใส่รหัสเพื่อปลดล็อก 🔒</p><div class="dots" id="dots"></div><small id="pinHint" style="min-height:1.4em;color:#fff"></small><div class="keypad" id="keypad"></div></div>
+ <div class="screen on" id="lockScreen"><div class="clock" id="clock">00:00</div><small id="lockGreeting">สวัสดีนะ เรามาดูอะไรสนุกๆกันดีไหม ♥ 🌙✨</small><p style="font-size:.8rem">ใส่รหัสเพื่อปลดล็อก 🔒</p><div class="dots" id="dots"></div><small id="pinHint" style="min-height:1.4em;color:#fff"></small><div class="keypad" id="keypad"></div></div>
  <div class="screen" id="homeScreen"><small>ยินดีต้อนรับ ♥</small>
   <div class="app" id="app" onclick="openApp()"><div class="mini"><div class="door"><div class="flowers">🌷🌸🌻</div><div class="glow"></div><div class="leaf"></div></div></div></div>
   <small>Museum of Us</small><small style="margin-top:auto">แตะที่ประตู 👆</small></div></div></section>
@@ -533,7 +533,7 @@ textarea{width:min(320px,90vw);height:90px;border-radius:12px;border:1px solid v
     <span class="card-corner tl"></span><span class="card-corner tr"></span><span class="card-corner bl"></span><span class="card-corner br"></span>
     <h3>Happy Anniversary ♥</h3>
     <p id="annivCardMessage"></p>
-    <div class="signature">รักนะ · Always & Forever ♡</div>
+    <div class="signature">ขอบคุณที่เข้ามาเป็นโชคดีของเค้านะ ♡</div>
    </div>
   </div>
  </div>
@@ -564,7 +564,7 @@ textarea{width:min(320px,90vw);height:90px;border-radius:12px;border:1px solid v
 
 <!-- ป๊อปอัพจดหมาย -->
 <div id="letterModal" onclick="if(event.target===this)closeLetter()">
- <div class="letter"><h3>ถึงคนพิเศษของฉัน ♥</h3><div id="letterBody"></div>
+ <div class="letter"><h3>ถึงน้องเก่งของพี่เนยย ♥</h3><div id="letterBody"></div>
   <button class="btn" style="margin-top:14px;color:#a4466b;border-color:#a4466b" onclick="closeLetter()">เก็บจดหมาย ♡</button></div>
 </div>
 
@@ -579,13 +579,13 @@ textarea{width:min(320px,90vw);height:90px;border-radius:12px;border:1px solid v
    ★ โหมดใช้งานจริง: ไม่มีปุ่มข้ามเกมหรือทางลัดสำหรับเทส */
 const CONFIG = {
   debug: false,
-  passcode: "0803",
+  passcode: "0709",
   passHint: "ใบ้: วันสำคัญของเรา (วัน + เดือน) 💭",
 
   phone: {
     lockWallpaper: "",
     homeWallpaper: "",
-    greeting: "hi, favorite person ♥ 🌙✨"
+    greeting: "สวัสดีนะ เรามาดูอะไรสนุกๆกันดีไหม ♥ 🌙✨"
   },
 
   music: {
@@ -595,31 +595,67 @@ const CONFIG = {
   },
 
   birthdayPhotos: [
-    { src: "", caption: "วันแรกที่เจอกัน 🌙" },
-    { src: "", caption: "ยิ้มของเธอสวยที่สุด" },
-    { src: "", caption: "ขอบคุณที่เกิดมานะ" },
-    { src: "", caption: "วันเกิดปีที่แล้ว 🎂" },
-    { src: "", caption: "รักนะ ♥" }
+    { src: "Photos/jpg3.jpg", caption: "รูปที่ชอบที่สุดเพราะหล่อมาก" },
+    { src: "Photos/jpg1.jpg", caption: "ขอให้มีความสุขกับสิ่งเล็กๆในแต่ละวัน" },
+    { src: "Photos/jpg4.jpg", caption: "ขอบคุณที่เกิดมานะ" },
+    { src: "Photos/เดตแรกของเราสองคน.jpg", caption: "วันเกิดในปีถัดไปก็อยากเห็นเธอมีความสุข🎂" },
+    { src: "Photos/อเมซอนครั้งแรก.jpg", caption: "สุขสันต์วันเกิดนะ ♥" }
   ],
   birthdayMessage: "สุขสันต์วันเกิดนะ ♥<br>ขอให้ปีนี้เต็มไปด้วยเรื่องราวดี ๆ รอยยิ้ม และวันที่ทำให้มีความสุข ขอบคุณที่เกิดมา และเติบโตมาเป็นเธอในวันนี้<br><b>happy birthday, my favorite person ♥</b>",
   birthdayReasons: [
-    { icon: "😊", text: "รอยยิ้มของเธอทำให้วันแย่ๆ กลายเป็นวันที่ดี" },
-    { icon: "🌙", text: "ทุกค่ำคืนที่มีเธอ ใจมันอุ่นเสมอ" },
-    { icon: "🍀", text: "เธอทำให้ฉันอยากเป็นคนที่ดีขึ้นทุกวัน" },
-    { icon: "🤍", text: "แค่ได้อยู่ข้างๆ เธอ ก็เพียงพอแล้ว" },
-    { icon: "✨", text: "เธอคือเรื่องราวที่ดีที่สุดในชีวิตฉัน" }
+    { icon: "😊", text: "อ้าว วันเกิดนี่น้าปีนี้ต้องมีความสุขกว่าเดิมแน่เลย" },
+    { icon: "🌙", text: "ทุกๆคืนหวังว่าเธอจะนอนหลับไม่ฝันเลยนะ" },
+    { icon: "🍀", text: "โชคดีปีนี้ของน้องเก่งพี่ขอให้มีมากมายเหมือใบโคลว์ห้าแฉกหลายๆต้นน้าา" },
+    { icon: "🤍", text: "การเติบโตของน้องเก่งจะมีพี่เนยคอยหนุนหลังเสมอน้า" },
+    { icon: "✨", text: "ขอบคุณที่เกิดขึ้นมาและเติบโตมาเป็นอย่างดี" }
   ],
-  birthdayLetter: "สุขสันต์วันเกิดนะคนเก่งของฉัน\nขอบคุณที่เกิดมา ขอบคุณที่เลือกเดินมาด้วยกัน\nปีนี้ขอให้เธอมีแต่เรื่องดีๆ\nและขอให้ฉันได้เป็นส่วนหนึ่งของทุกวันนั้นนะ\n\nรักเธอที่สุดเลย ♥",
+  birthdayLetter: "สุขสันต์วันเกิดน้า\nขอบคุณที่เกิดมา ขอบคุณที่เลือกเดินมาด้วยกัน\nปีนี้ขอให้เธอมีแต่เรื่องดีๆ\nและขอให้การเติบโตในทุกๆวันมีแต่สิ่งดีๆเข้ามาในชีวิตเสมอ\n\nสุขสันต์วันเกิด ♥",
 
-  museumPhotos: [
-    { src: "", title: "DAY1 — เจอวันแรก",    note: "วันแรกที่เราเจอกัน เขินมากแต่ก็ดีใจ" },
-    { src: "", title: "DAY2 — เที่ยวด้วยกัน", note: "ครั้งแรกที่ไปเที่ยวสองคน" },
-    { src: "", title: "DAY3 — มื้ออร่อย",     note: "มื้ออร่อยที่สุดเพราะมีเธอ" },
-    { src: "", title: "DAY4 — ฝนตก",          note: "วันที่ฝนตก แต่ใจอุ่น" },
-    { src: "", title: "DAY5 — ภาพในใจ",       note: "ภาพที่เก็บไว้ในใจเสมอ" },
-    { src: "", title: "DAY6 — ทริปแรก",       note: "ทริปแรกของเรา" },
-    { src: "", title: "OUR LOVE ♥",           note: "และอีกหลายวันต่อจากนี้ เราไปด้วยกันนะ" }
-  ],
+ museumPhotos: [
+
+  { 
+    src: "photos/อยู่ด้วกันตอนจีบ.jpg", 
+    title: "DAY1 – วันแรกที่จีบกัน",
+    note: "วันแรกที่เราเจอกันคือวันรับน้องนินา ครั้งแรกที่ได้ไปนั่งทำความรู้จักกันเธอบอกว่าชอบเค้าตั้งแต่แรกเห็นเลย น่ารักเนอะ"
+  },
+
+  { 
+    src: "photos/รูปคู่ในเดตแรก.jpg", 
+    title: "DAY2 – เที่ยวด้วยกันสองคน",
+    note: "ทริปที่เราไปด้วยกัน ขอบคุณที่ไปด้วยกันนะถึงแม้จะเป็นเพียงทริปเล็กๆแต่เค้าก็มีความสุขมาก หวังว่าในอนาคตเราจะได้ไปทริปที่เคยคุยกันไว้นะ"
+  },
+
+  { 
+    src: "photos/อเมซอนครั้งแรก.jpg", 
+    title: "DAY3 – รูปแห่งความทรงจำ",
+    note: "ช่วงที่คบกันใหม่ๆ ช่วงนั้นเราถ่ายรูปด้วยกันเยอะมากแต่เป็นรูปในห้องอ่ะนะ555 หาไม่เจอแล้วแต่เค้าอยากบอกว่าทุกครั้งที่เราหยิบมือถือมาถ่ายรูปเค้ามีความสุขมากๆเพราะมันคือความทรงจำเดียวในตอนนั้นที่เราสามารถสร้างมันได้โดยไม่ต้องออกไปไหน หวังว่าเราจะมีรูปเยอะๆกว่านี้ในอนาคตนะ"
+  },
+
+  { 
+    src: "photos/ดูงานครั้งแรก.jpg", 
+    title: "DAY4 – เธอไปไหนเค้าขอไปด้วย",
+    note: "ทุกวันที่อยู่ด้วยกันคือวันที่ดีที่สุด ถึงจะทะเลาะกันบ้างแต่สุดท้ายแล้วเราก้ผ่านมันมาได้ จับมือผ่านเรื่องราวต่างๆมาด้วยกันตั้งเยอะเลยเนอะ"
+  },
+
+  { 
+    src: "photos/jpg5.jpg", 
+    title: "DAY5 – ช่วงเวลาเล็กๆ",
+    note: "ช่วงเวลาเล็กๆ ที่เรามีให้กันมันมีความหมายมากๆเลย ขอบคุณที่เป็นความสุขให้เค้าตลอด 3ปีที่ผ่านมานะ"
+  },
+
+  { 
+    src: "photos/ผูกรองเท้า.jpg", 
+    title: "DAY6 – คอยดูแล",
+    note: "คอยดูแลกันมาเสมอ ถึงแม้ว่าเค้าจะเอาแต่ใจแต่เธอก็ยังเลือกตามใจเค้าตลอดและในวันที่เศร้าถึงแม้เธอจะพูดปลอบไม่เก่งแต่เธอกอดอุ่นมาก ขอบคุณมากนะ"
+  },
+
+  { 
+    src: "photos/ขอบคุณนะ.jpg", 
+    title: "OUR LOVE ♥",
+    note: "ทุกความทุกข์ ความสุขและความสำเร็จขอบคุณที่คอยอยู่ข้างๆเสมอ ทุกครั้งที่เศร้าข้างหลังเค้าก้าวหนึ่งจะมีเธอเสมอแต่เธอก็อย่าลืมเหมือนกันนะว่าข้างหลังเธอหนึ่งก้าวก็มีเค้าอยู่เสมอเช่นกัน"
+  }
+
+],
 
   flowers: [
     { icon: "🌷", name: "ทิวลิป",    meaning: "รักแท้ ความรักที่จริงใจ" },
@@ -629,7 +665,7 @@ const CONFIG = {
   ],
 
   balloonWishes: ["ขอให้มีความสุขมากๆ 💗", "สุขภาพแข็งแรงนะ 🌿", "ขอให้สมหวังทุกอย่าง ✨", "ยิ้มได้ทุกวันเลย 😊", "มีเราอยู่ข้างๆ เสมอ ♥", "รักนะ 🎂"],
-  bigNote: "ถึงคนที่ฉันรักที่สุด<br>ขอบคุณที่อยู่ข้างกันในทุกวัน ครบรอบนี้อยากบอกว่า...ฉันยังเลือกเธอ ทุกวัน ทุกปี ♥"
+  bigNote: "ถึงน้องเก่ง<br>ขอบคุณที่อยู่ข้างกันในทุกวันนะ เค้าเคยคิดว่าตัวเองเป็นคนไม่มีโชค จนกระทั่งได้เจอเธอ ถึงได้รู้ว่าโชคดีทั้งหมดของเค้ามันถูกเก็บไว้ใช้เพื่อเวลานี้ ขอบคุณที่วันนั้นเลือกที่จะมองเค้านะ ♥"
 };
 
 /* ============ ตัวช่วยพื้นฐาน ============ */
